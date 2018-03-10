@@ -4,29 +4,43 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <input id="expression-field" type="text" value="0" class="text" />
-    <div class="button-group">
-      <button id="btn-1">1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>+</button>
-    </div>
-    <div class="button-group">
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button>-</button>
-    </div>
-    <div class="button-group">
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button>*</button>
-    </div>
-    <div class="button-group">
-      <button>0</button>
-      <button id="equals" class="long-button">=</button>
-      <button>/</button>
+    <div class="main-container">
+      <input id="expression-field" type="text" value="0" class="text" />
+      <div class="keypad">
+        <div class="number-pad">
+          <div class="button-group">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>+</button>
+          </div>
+          <div class="button-group">
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>-</button>
+          </div>
+          <div class="button-group">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>*</button>
+          </div>
+          <div class="button-group">
+            <button>^</button>
+            <button>0</button>
+            <button>.</button>
+            <button>/</button>
+          </div>
+        </div>
+        <div class="text-operations">
+          <div class="button-group">
+            <button id="clear">C</button>
+            <button id="backspace"><=</button>
+            <button id="equals" class="long-button">=</button>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="script.js" type="text/javascript"></script>
   </body>

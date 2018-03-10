@@ -45,16 +45,24 @@ const calculateResult = expression => {
 
 const textField = document.getElementById("expression-field");
 const buttons =
-  document.querySelectorAll('.button-group button:not(.long-button)');
+  document.querySelectorAll('.button-group button');
 const equalsButton = document.getElementById("equals");
+const clearButton = document.getElementById("clear");
+
+clearButton.addEventListener('click', event => {
+  textField.value = '0';
+})
+
 buttons.forEach(currentButton => {
-  currentButton.addEventListener('click', event => {
-    if (textField.value === '0') {
-      textField.value = currentButton.innerText;
-    } else {
-      textField.value += currentButton.innerText;
-    }
-  })
+  if (!currentButton.id) {
+    currentButton.addEventListener('click', event => {
+      if (textField.value === '0') {
+        textField.value = currentButton.innerText;
+      } else {
+        textField.value += currentButton.innerText;
+      }
+    })
+  }
 })
 
 equalsButton.addEventListener('click', event => {
